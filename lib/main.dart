@@ -1,3 +1,4 @@
+import 'package:day_2/day_3/day3.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: "/day3",
+      routes:{
+        "/home": (context) => const MyApp(),
+        "/day3": (context) => const Day3(),
+      },
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           bottomNavigationBar: BottomNavigationBar(
